@@ -1,5 +1,4 @@
 {
-  "ts-node": { "esm": true },
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
