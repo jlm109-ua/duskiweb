@@ -1,6 +1,10 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
+import LanguageSwitcher from "./LanguageSwitcher";
 
-export default function Navbar() {
+export default function Navbar(props: {params: {locale: string}}) {
+  const t = useTranslations();
+
   return (
     <div className="w-full flex justify-center">
       <div className="flex items-center justify-center">
@@ -15,33 +19,36 @@ export default function Navbar() {
       <ul className="flex justify-center sm:space-x-12 space-x-4 text-white ">
         <li>
           <a className="cursor-pointer hover:underline" href="/">
-            Home
+            {t("home")}
           </a>
         </li>
         <li>
           <a className="cursor-pointer hover:underline" href="/members">
-            Members
+            {t("members")}
           </a>
         </li>
         <li>
           <a className="cursor-pointer hover:underline" href="/products">
-            Products
+            {t("products")}
           </a>
         </li>
         <li>
           <a className="cursor-pointer hover:underline" href="/events">
-            Events
+            {t("events")}
           </a>
         </li>
         <li>
           <a className="cursor-pointer hover:underline" href="/contact">
-            Contact
+            {t("contact")}
           </a>
         </li>
         <li>
           <a className="cursor-pointer hover:underline" href="/about-us">
-            About us
+            {t("aboutUs")}
           </a>
+        </li>
+        <li>
+          <LanguageSwitcher params={props.params} />
         </li>
       </ul>
     </div>
