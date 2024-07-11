@@ -1,1 +1,0 @@
-// por si queremos traducir (formatear) fechas. no creo que haga falta pero aquí está

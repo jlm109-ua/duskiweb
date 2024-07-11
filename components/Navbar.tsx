@@ -1,9 +1,9 @@
 import Image from "next/image";
-import { useTranslations } from "next-intl";
 import LanguageSwitcher from "./LanguageSwitcher";
+import { useTranslations } from "next-intl";
 
-export default function Navbar(props: {params: {locale: string}}) {
-  const t = useTranslations();
+export default function Navbar() {
+  const t = useTranslations("Index");
 
   return (
     <div className="w-full flex justify-center">
@@ -48,7 +48,7 @@ export default function Navbar(props: {params: {locale: string}}) {
           </a>
         </li>
         <li>
-          <LanguageSwitcher params={props.params} />
+          <LanguageSwitcher />
         </li>
       </ul>
     </div>

@@ -1,14 +1,11 @@
 import Navbar from "../../components/Navbar";
 import ImageSlider from "../../components/ImageSlider";
 import Image from "next/image";
-import { getTranslations } from "next-intl/server";
 
-export default async function Home(props: {params: {locale: string}}) {
-  const t = await getTranslations({ locale: props.params.locale });
-
+export default async function Home() {
   return (
     <div className="flex-col justify-center align-top min-h-screen w-screen bg-black p-5">
-      <Navbar params={props.params} />
+      <Navbar />
 
       <div className="w-full flex justify-center items-center">
         <ImageSlider />
@@ -24,4 +21,3 @@ export default async function Home(props: {params: {locale: string}}) {
     </div>
   );
 }
-

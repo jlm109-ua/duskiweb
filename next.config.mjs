@@ -1,7 +1,13 @@
-import withNextIntl from 'next-intl';
-import i18n from './i18n.ts';
+import createNextIntlPlugin from "next-intl/plugin";
+
+const withNextIntl = createNextIntlPlugin("./i18n.ts");
 
 /** @type {import('next').NextConfig} */
-const nextConfig = withNextIntl(i18n);
+const nextConfig = {
+  images: {
+    loader: "default",
+    domains: ["duskies.es, localhost"],
+  },
+};
 
-export default nextConfig;
+export default withNextIntl(nextConfig);

@@ -1,9 +1,9 @@
-import { defaultLocale, supportedLocales } from "@/i18n";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { notFound } from "next/navigation";
 import { ReactNode } from "react";
-import "../globals.css";
+import { getMessages } from "next-intl/server";
+import { NextIntlClientProvider } from "next-intl";
+import "@/styles/globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,14 +17,19 @@ interface Props {
   params: { locale: string };
 }
 
-export default function RootLayout(props: Props) {
-  const { children, params } = props;
-
-  if (!supportedLocales.includes(params.locale)) notFound();
+export default async function RootLayout({
+  children,
+  params: { locale },
+}: Props) {
+  const messages = await getMessages();
 
   return (
-    <html lang={params.locale || defaultLocale}>
-      <body className={inter.className}>{children}</body>
+    <html lang={locale}>
+      <body className={inter.className}>
+        <NextIntlClientProvider messages={messages}>
+          {children}
+        </NextIntlClientProvider>
+      </body>
     </html>
   );
 }
