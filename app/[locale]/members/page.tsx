@@ -9,11 +9,15 @@ import { useTranslations } from "next-intl";
  * @param t - La función de traducción.
  * @returns Lista de miembros con su información.
  */
-const getMembers = () => {
+const useGetMembers = () => {
   const t = useTranslations();
   const members = t.raw("Members");
   console.log("DEBUG: ", members);
-  const memberKeys = Object.keys(members).filter((key) => key !== "title" && key !== "meetTheMember");
+  
+  const memberKeys = Object.keys(members).filter(
+    (key) => key !== "title" && key !== "meetTheMember"
+  );
+  
   return memberKeys.map((key) => ({
     title: key,
     description: members[key].description,
@@ -25,7 +29,7 @@ const getMembers = () => {
 
 function MembersPage() {
   const t = useTranslations("Members");
-  const members = getMembers();
+  const members = useGetMembers();
 
   return (
     <div className="flex-col justify-center align-top min-h-screen w-screen bg-black p-5">
@@ -41,7 +45,5 @@ function MembersPage() {
     </div>
   );
 }
-
-// ToDo: Poner un link en cada miembro para que se pueda ver su perfil (debajo del último </Box>).
 
 export default MembersPage;
