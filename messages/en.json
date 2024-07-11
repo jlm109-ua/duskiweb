@@ -17,10 +17,15 @@
     "title": "Members",
     "meetTheMember": "Meet the member!",
     "Jimy": {
-      "description": "Jimy is a very cool guy and loves destroying his Lexus. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      "description": "Jimy is a very cool guy and loves destroying his Lexus. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "car": "Lexus IS200",
+      "carDescription": "This is a very cool car"
+      
     },
     "Edu": {
-      "description": "Edu is a very cool guy and loves destroying his BMW as well. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      "description": "Edu is a very cool guy and loves destroying his BMW as well. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "car": "BMW 330Ci",
+      "carDescription": "This is a very cool car too"
     }
   }
 }

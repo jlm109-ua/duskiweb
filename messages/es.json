@@ -17,10 +17,14 @@
     "title": "Miembros",
     "meetTheMember": "¡Conoce al miembro!",
     "Jimy": {
-      "description": "Jimy es un chico muy guay y le encanta destruir su Lexus. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      "description": "Jimy es un chico muy guay y le encanta destruir su Lexus. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "car": "Lexus IS200",
+      "carDescription": "Este es un coche muy guay"
     },
     "Edu": {
-      "description": "Edu es un chico muy guay y le encanta destruir su BMW también. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      "description": "Edu es un chico muy guay y le encanta destruir su BMW también. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "car": "BMW 330Ci",
+      "carDescription": "Este es un coche muy guay también"
     }
   }
 }

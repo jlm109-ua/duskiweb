@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { ChevronRightIcon } from "@chakra-ui/icons";
+import { useState } from "react";
 
 /**
  * Componente que permite animaciones con Framer Motion y Chakra UI.
@@ -36,9 +37,12 @@ const MemberTitle = ({ children, color }: {children: string, color: string}) => 
  * @param index - El índice del miembro.
  */
 const MemberSection = ({ member, index }: { member: any; index: number }) => {
-  const { image, title, description } = member;
+  const { image, title, description, car, carDescription } = member;
   const isEven = index % 2 === 0;
   const t = useTranslations("Members");
+
+  // Estado para controlar el texto del hover
+  const [hovered, setHovered] = useState(false);
 
   const transition = {
     duration: 0.8,
@@ -64,6 +68,11 @@ const MemberSection = ({ member, index }: { member: any; index: number }) => {
             display="flex" 
             justifyContent={isEven ? 'flex-end' : 'flex-start' } 
             alignItems={isEven ? 'right' : 'left'}
+            _hover={{
+                "& img": {
+                  boxShadow: "0 0 20px 10px rgba(255, 0, 0, 0.5)",
+                },
+            }}
         >
           <Image
             src={image}
@@ -71,18 +80,25 @@ const MemberSection = ({ member, index }: { member: any; index: number }) => {
             width={400}
             height={400}
             className="rounded-sm"
-            style={{ borderColor: "black", borderWidth: 1}}
-          />
+            onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow = "0 0 20px 10px rgba(255, 0, 0, 0.5)";
+                setHovered(true);
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow = "none";
+                setHovered(false);
+              }}
+        />
         </Box>
         <Box 
             flex="1"
             textAlign={isEven ? 'left' : 'right'}
         >
           <MemberTitle color={isEven ? 'white' : 'black'}>
-            {title}
+            {hovered ? car : title}
           </MemberTitle>
           <Text fontSize="md" color={isEven ? 'white' : 'black'}>
-            {description}
+            {hovered ? carDescription : description}
           </Text>
           <Text fontSize="md" color={'red'} mt={1}>  
             <Link href={"/members"}>{t('meetTheMember')} <ChevronRightIcon/></Link>

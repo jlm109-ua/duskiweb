@@ -18,6 +18,8 @@ const getMembers = () => {
     title: key,
     description: members[key].description,
     image: `/members/${key.toLowerCase()}.jpg`,
+    car: members[key].car,
+    carDescription: members[key].carDescription,
   }));
 };
 
