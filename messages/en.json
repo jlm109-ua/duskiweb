@@ -11,5 +11,16 @@
   "LangSwitcher": {
     "en": "English",
     "es": "Spanish"
+  },
+
+  "Members": {
+    "title": "Members",
+    "meetTheMember": "Meet the member!",
+    "Jimy": {
+      "description": "Jimy is a very cool guy and loves destroying his Lexus. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    "Edu": {
+      "description": "Edu is a very cool guy and loves destroying his BMW as well. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    }
   }
 }

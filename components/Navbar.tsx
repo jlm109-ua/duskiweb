@@ -28,11 +28,6 @@ export default function Navbar() {
           </a>
         </li>
         <li>
-          <a className="cursor-pointer hover:underline" href="/products">
-            {t("products")}
-          </a>
-        </li>
-        <li>
           <a className="cursor-pointer hover:underline" href="/events">
             {t("events")}
           </a>

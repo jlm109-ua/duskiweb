@@ -11,5 +11,16 @@
   "LangSwitcher": {
     "en": "Inglés",
     "es": "Español"
+  },
+
+  "Members": {
+    "title": "Miembros",
+    "meetTheMember": "¡Conoce al miembro!",
+    "Jimy": {
+      "description": "Jimy es un chico muy guay y le encanta destruir su Lexus. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    "Edu": {
+      "description": "Edu es un chico muy guay y le encanta destruir su BMW también. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    }
   }
 }

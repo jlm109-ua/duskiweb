@@ -1,70 +1,98 @@
 "use client";
 
-import { Box, Text, Image, Flex } from '@chakra-ui/react';
-import { motion, Transition } from 'framer-motion';
-import { chakra, shouldForwardProp } from '@chakra-ui/react';
+import { Box, Text, Flex } from "@chakra-ui/react";
+import { motion } from "framer-motion";
+import { chakra, shouldForwardProp } from "@chakra-ui/react";
+import Image from "next/image";
+import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { ChevronRightIcon } from "@chakra-ui/icons";
 
+/**
+ * Componente que permite animaciones con Framer Motion y Chakra UI.
+ */
 const MotionBox = chakra(motion.div, {
-    shouldForwardProp: prop => {
-        return shouldForwardProp(prop) || prop === 'transition';
-    }})
+  shouldForwardProp: (prop) => {
+    return shouldForwardProp(prop) || prop === "transition";
+  },
+});
 
-const MemberSection = ({ member, index }: { member: any, index: number }) => {
-    const { image, title, description } = member;
-    const isEven = index % 2 === 0;
-
-    const transition: Transition = {
-        duration: 0.8,
-        delay: index * 0.2
-    }
-
+/**
+ * Componente que muestra el título de un miembro.
+ * @param children - El texto del título.
+ * @param color - El color del texto.
+ */
+const MemberTitle = ({ children, color }: {children: string, color: string}) => {
     return (
-        <MotionBox
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            //transition={transition}
-            alignContent={'center'}
-            mb={8}
-            p={4}
-            bg={isEven ? 'gray.100' : 'gray.200'}
-            boxShadow="md"
-            borderRadius="md"
-        >
-            <Flex
-                direction={isEven ? 'row-reverse' : 'row'}
-                align="center"
-            >
-                <Box
-                    flex="1"
-                    mr={isEven ? 0 : 4}
-                    ml={isEven ? 4 : 0}
-                >
-                    <Image
-                        src={image}
-                        alt={title}
-                        borderRadius="md"
-                    />
-                </Box>
-                <Box
-                    flex="2"
-                >
-                    <Text
-                        fontSize="xl"
-                        fontWeight="bold"
-                        color="gray.800"
-                    >
-                        {title}
-                    </Text>
-                    <Text
-                        fontSize="md"
-                        color="gray.600"
-                    >
-                        {description}
-                    </Text>
-                </Box>
-            </Flex>
-        </MotionBox>
-    )
-}
+        <Text fontSize="75" fontWeight="bold" color={color}>
+            {children}
+        </Text>
+    );
+};
 
-export default MemberSection
+/**
+ * Componente que muestra la información de un miembro.
+ * @param member - La información del miembro.
+ * @param index - El índice del miembro.
+ */
+const MemberSection = ({ member, index }: { member: any; index: number }) => {
+  const { image, title, description } = member;
+  const isEven = index % 2 === 0;
+  const t = useTranslations("Members");
+
+  const transition = {
+    duration: 0.8,
+    delay: index * 0.2,
+  } as any; // ToDo: fixear tipado
+
+  return (
+    <MotionBox
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={transition}
+      p={4}
+      bg={isEven ? "black" : "white"}
+    >
+      <Flex 
+        direction={isEven ? "row-reverse" : "row"} 
+        align="center"
+      >
+        <Box 
+            flex="1" 
+            mr={isEven ? 0 : 4} 
+            ml={isEven ? 4 : 0} 
+            display="flex" 
+            justifyContent={isEven ? 'flex-end' : 'flex-start' } 
+            alignItems={isEven ? 'right' : 'left'}
+        >
+          <Image
+            src={image}
+            alt={title}
+            width={400}
+            height={400}
+            className="rounded-sm"
+            style={{ borderColor: "black", borderWidth: 1}}
+          />
+        </Box>
+        <Box 
+            flex="1"
+            textAlign={isEven ? 'left' : 'right'}
+        >
+          <MemberTitle color={isEven ? 'white' : 'black'}>
+            {title}
+          </MemberTitle>
+          <Text fontSize="md" color={isEven ? 'white' : 'black'}>
+            {description}
+          </Text>
+          <Text fontSize="md" color={'red'} mt={1}>  
+            <Link href={"/members"}>{t('meetTheMember')} <ChevronRightIcon/></Link>
+          </Text>
+        </Box>
+      </Flex>
+    </MotionBox>
+  );
+};
+
+// ToDo: enrutar a la página de perfil de cada miembro.
+
+export default MemberSection;
