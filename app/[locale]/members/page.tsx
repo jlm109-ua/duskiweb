@@ -11,34 +11,28 @@ const members = [
   }
   */
   {
-    image: '/members/jimy.jpg',
-    title: 'Jimy',
-    description: 'Jimy is a very cool guy and loves destroying his Lexus.'
+    image: "/members/jimy.jpg",
+    title: "Jimy",
+    description: "Jimy is a very cool guy and loves destroying his Lexus.",
   },
   {
-    image: '/members/edu.jpg',
-    title: 'Edu',
-    description: 'Edu is a very cool guy and loves destroying his BMW as well.'
-  }
-]
+    image: "/members/edu.jpg",
+    title: "Edu",
+    description: "Edu is a very cool guy and loves destroying his BMW as well.",
+  },
+];
 
 function MembersPage() {
   return (
     <div className="flex-col justify-center align-top min-h-screen w-screen bg-black p-5">
       <Navbar />
-      <Box
-        p={2}
-      >
+      <Box className="mt-10" p={2}>
         {members.map((member, index) => (
-          <MemberSection
-            key={index}
-            member={member}
-            index={index}
-          />
+          <MemberSection key={index} member={member} index={index} />
         ))}
       </Box>
     </div>
   );
 }
 
-export default MembersPage
+export default MembersPage;
