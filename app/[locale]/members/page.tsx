@@ -1,8 +1,6 @@
 import Navbar from "@/components/Navbar";
 import { Box } from "@chakra-ui/react";
 import MemberSection from "@/components/MemberSection";
-import jimy from '../../public/members/jimy.jpg'
-import edu from '../../public/members/edu.jpg'
 
 const members = [
   /* FORMATO DE CADA MIEMBRO
@@ -13,12 +11,12 @@ const members = [
   }
   */
   {
-    image: jimy,
+    image: '/members/jimy.jpg',
     title: 'Jimy',
     description: 'Jimy is a very cool guy and loves destroying his Lexus.'
   },
   {
-    image: edu,
+    image: '/members/edu.jpg',
     title: 'Edu',
     description: 'Edu is a very cool guy and loves destroying his BMW as well.'
   }
