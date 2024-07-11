@@ -23,9 +23,10 @@ const MemberSection = ({ member, index }: { member: any, index: number }) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             //transition={transition}
+            alignContent={'center'}
             mb={8}
             p={4}
-            bg="white"
+            bg={isEven ? 'gray.100' : 'gray.200'}
             boxShadow="md"
             borderRadius="md"
         >
