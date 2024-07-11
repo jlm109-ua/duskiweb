@@ -1,0 +1,15 @@
+{
+  "Index": {
+    "home": "Home",
+    "members": "Members",
+    "products": "Products",
+    "events": "Events",
+    "contact": "Contact",
+    "aboutUs": "About Us"
+  },
+
+  "LangSwitcher": {
+    "en": "English",
+    "es": "Spanish"
+  }
+}

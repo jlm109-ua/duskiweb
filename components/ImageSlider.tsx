@@ -13,10 +13,10 @@ export default function ImageSlider() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImage((currentImage + 1) % images.length);
+      setCurrentImage((prevImage) => (prevImage + 1) % images.length);
     }, 4000);
     return () => clearInterval(interval);
-  }, [currentImage]);
+  }, []);
 
   return (
     <div className="relative w-8/12 h-full mt-10">
@@ -26,6 +26,9 @@ export default function ImageSlider() {
         width={1990}
         height={1080}
         className="w-full h-full object-cover"
+        onError={() =>
+          console.error(`Failed to load image: ${images[currentImage]}`)
+        }
       />
     </div>
   );
