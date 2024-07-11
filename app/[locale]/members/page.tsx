@@ -11,12 +11,12 @@ const members = [
   }
   */
   {
-    image: '../../public/members/jimy.jpg',
+    image: '/members/jimy.jpg',
     title: 'Jimy',
     description: 'Jimy is a very cool guy and loves destroying his Lexus.'
   },
   {
-    image: '../../public/members/edu.jpg',
+    image: '/members/edu.jpg',
     title: 'Edu',
     description: 'Edu is a very cool guy and loves destroying his BMW as well.'
   }
