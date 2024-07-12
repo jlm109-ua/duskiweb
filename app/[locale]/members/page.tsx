@@ -5,7 +5,7 @@ import Title from "@/components/Title";
 import { useTranslations } from "next-intl";
 
 /**
- * Obtiene los miembros dinámicamente de las traducciones.
+ * Obtiene los miembros dinámicamente de las traducciones. Tiene que llamarse useGetMembers por usar una hook en su body.
  * @param t - La función de traducción.
  * @returns Lista de miembros con su información.
  */
