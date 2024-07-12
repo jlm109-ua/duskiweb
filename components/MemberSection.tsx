@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Text, Flex } from "@chakra-ui/react";
+import { Box, Text, Flex, Container } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { chakra, shouldForwardProp } from "@chakra-ui/react";
 import Image from "next/image";
@@ -38,8 +38,15 @@ const MemberTitle = ({ children, color }: {children: string, color: string}) => 
  */
 const MemberSection = ({ member, index }: { member: any; index: number }) => {
   const { image, title, description, car, carDescription } = member;
+
+  // DEBUG
+  console.log("DEBUG - MEMBER: ", member);
+  console.log("DEBUG - VARIABLES: ", { image, title, description, car, carDescription});
+
   const isEven = index % 2 === 0;
   const t = useTranslations("Members");
+  const imgShadowBlack = "0 0 20px 10px rgba(0, 0, 0, 0.5)";
+  const imgShadowWhite = "0 0 20px 10px rgba(255, 255, 255, 0.5)";
 
   // Estado para controlar el texto del hover
   const [hovered, setHovered] = useState(false);
@@ -50,62 +57,62 @@ const MemberSection = ({ member, index }: { member: any; index: number }) => {
   } as any; // ToDo: fixear tipado
 
   return (
-    <MotionBox
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={transition}
-      p={4}
-      bg={isEven ? "black" : "white"}
+    <Container
+      maxW={1200}
     >
-      <Flex 
-        direction={isEven ? "row-reverse" : "row"} 
-        align="center"
+      <MotionBox
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={transition}
+        p={4}
+        mb={4}
+        bg={isEven ? "black" : "white"}
       >
-        <Box 
-            flex="1" 
-            mr={isEven ? 0 : 4} 
-            ml={isEven ? 4 : 0} 
-            display="flex" 
-            justifyContent={isEven ? 'flex-end' : 'flex-start' } 
-            alignItems={isEven ? 'right' : 'left'}
-            _hover={{
-                "& img": {
-                  boxShadow: "0 0 20px 10px rgba(255, 0, 0, 0.5)",
-                },
-            }}
+        <Flex 
+          direction={isEven ? "row-reverse" : "row"} 
+          align="center"
         >
-          <Image
-            src={image}
-            alt={title}
-            width={400}
-            height={400}
-            className="rounded-sm"
-            onMouseEnter={(e) => {
-                e.currentTarget.style.boxShadow = "0 0 20px 10px rgba(255, 0, 0, 0.5)";
+          <Box 
+              flex="1" 
+              mr={isEven ? 0 : 4} 
+              ml={isEven ? 4 : 0} 
+              display="flex" 
+              justifyContent={isEven ? 'flex-end' : 'flex-start' } 
+              alignItems={isEven ? 'right' : 'left'}
+          >
+            <Image
+              src={image}
+              alt={title}
+              width={400}
+              height={400}
+              className="rounded-sm"
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow = isEven ? imgShadowWhite : imgShadowBlack;
                 setHovered(true);
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.boxShadow = "none";
                 setHovered(false);
               }}
-        />
-        </Box>
-        <Box 
-            flex="1"
-            textAlign={isEven ? 'left' : 'right'}
-        >
-          <MemberTitle color={isEven ? 'white' : 'black'}>
-            {hovered ? car : title}
-          </MemberTitle>
-          <Text fontSize="md" color={isEven ? 'white' : 'black'}>
-            {hovered ? carDescription : description}
-          </Text>
-          <Text fontSize="md" color={'red'} mt={1}>  
-            <Link href={"/members"}>{t('meetTheMember')} <ChevronRightIcon/></Link>
-          </Text>
-        </Box>
-      </Flex>
-    </MotionBox>
+          />
+          </Box>
+          <Box 
+              flex="1"
+              textAlign={isEven ? 'left' : 'right'}
+          >
+            <MemberTitle color={isEven ? 'white' : 'black'}>
+              {hovered ? car : title}
+            </MemberTitle>
+            <Text fontSize="md" color={isEven ? 'white' : 'black'}>
+              {hovered ? carDescription : description}
+            </Text>
+            <Text fontSize="md" color={'red'} mt={1}>  
+              <Link href={"/members"}>{t('meetTheMember')} <ChevronRightIcon/></Link>
+            </Text>
+          </Box>
+        </Flex>
+      </MotionBox>
+    </Container>
   );
 };
 

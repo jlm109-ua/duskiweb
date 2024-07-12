@@ -20,11 +20,25 @@
       "description": "Jimy is a very cool guy and loves destroying his Lexus. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "car": "Lexus IS200",
       "carDescription": "This is a very cool car"
-      
     },
     "Edu": {
       "description": "Edu is a very cool guy and loves destroying his BMW as well. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "car": "BMW 330Ci",
+      "carDescription": "This is a very cool car too"
+    },
+    "Rodri": {
+      "description": "Rodri is a very cool guy and loves destroying his Miata as well. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "car": "Miata NB",
+      "carDescription": "This is a very cool car too"
+    },
+    "Wonder": {
+      "description": "Wonder is a very cool guy and loves destroying his 350Z as well. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "car": "Nissan 350Z",
+      "carDescription": "This is a very cool car too"
+    },
+    "FlyDaniel": {
+      "description": "FlyDaniel is a very cool guy and loves destroying his Primera as well. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "car": "Nissan Primera",
       "carDescription": "This is a very cool car too"
     }
   }

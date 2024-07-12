@@ -25,6 +25,21 @@
       "description": "Edu es un chico muy guay y le encanta destruir su BMW también. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "car": "BMW 330Ci",
       "carDescription": "Este es un coche muy guay también"
+    },
+    "Rodri": {
+      "description": "Rodri es un chico muy guay y le encanta destruir su Miata también. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "car": "Miata NB",
+      "carDescription": "Este es un coche muy guay también"
+    },
+    "Wonder": {
+      "description": "Wonder es un chico muy guay y le encanta destruir su 350Z también. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "car": "Nissan 350Z",
+      "carDescription": "Este es un coche muy guay también"
+    },
+    "FlyDaniel": {
+      "description": "FlyDaniel es un chico muy guay y le encanta destruir su Primera también. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "car": "Nissan Primera",
+      "carDescription": "Este es un coche muy guay también"
     }
   }
 }

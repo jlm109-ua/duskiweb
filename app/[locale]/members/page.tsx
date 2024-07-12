@@ -12,7 +12,9 @@ import { useTranslations } from "next-intl";
 const useGetMembers = () => {
   const t = useTranslations();
   const members = t.raw("Members");
-  console.log("DEBUG: ", members);
+  
+  // DEBUG
+  // console.log("DEBUG: ", members);
   
   const memberKeys = Object.keys(members).filter(
     (key) => key !== "title" && key !== "meetTheMember"
@@ -21,7 +23,7 @@ const useGetMembers = () => {
   return memberKeys.map((key) => ({
     title: key,
     description: members[key].description,
-    image: `/members/${key.toLowerCase()}.jpg`,
+    image: `/members/${key}.jpg`,
     car: members[key].car,
     carDescription: members[key].carDescription,
   }));
@@ -30,6 +32,9 @@ const useGetMembers = () => {
 function MembersPage() {
   const t = useTranslations("Members");
   const members = useGetMembers();
+
+  // DEBUG
+  // console.log("DEBUG - MEMBERS: ", members);
 
   return (
     <div className="flex-col justify-center align-top min-h-screen w-screen bg-black p-5">
