@@ -41,5 +41,10 @@
       "car": "Nissan Primera",
       "carDescription": "This is a very cool car too"
     }
+  },
+
+  "404": {
+    "notFound": "404 | Page not found",
+    "goHome": "Home"
   }
 }

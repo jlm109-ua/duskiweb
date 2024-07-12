@@ -41,5 +41,10 @@
       "car": "Nissan Primera",
       "carDescription": "Este es un coche muy guay también"
     }
+  },
+
+  "404": {
+    "notFound": "404 | Página no encontrada",
+    "goHome": "Inicio"
   }
 }

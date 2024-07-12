@@ -40,8 +40,8 @@ const MemberSection = ({ member, index }: { member: any; index: number }) => {
   const { image, title, description, car, carDescription } = member;
 
   // DEBUG
-  console.log("DEBUG - MEMBER: ", member);
-  console.log("DEBUG - VARIABLES: ", { image, title, description, car, carDescription});
+  // console.log("DEBUG - MEMBER: ", member);
+  // console.log("DEBUG - VARIABLES: ", { image, title, description, car, carDescription});
 
   const isEven = index % 2 === 0;
   const t = useTranslations("Members");
