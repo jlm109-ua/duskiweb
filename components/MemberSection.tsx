@@ -5,9 +5,10 @@ import { motion, Transition } from "framer-motion";
 import { chakra, shouldForwardProp } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 interface Member {
   image: string;
@@ -75,6 +76,8 @@ const MemberSection = ({
 
   // Estado para controlar el texto del hover
   const [hovered, setHovered] = useState(false);
+  const locale = useLocale();
+  const router = useRouter();
 
   const transition = {
     duration: 0.8,
@@ -106,7 +109,7 @@ const MemberSection = ({
               width={400}
               height={400}
               className="rounded-sm"
-              onMouseEnter={(e) => {
+              /* onMouseEnter={(e) => {
                 e.currentTarget.style.boxShadow = isEven
                   ? imgShadowWhite
                   : imgShadowBlack;
@@ -115,7 +118,7 @@ const MemberSection = ({
               onMouseLeave={(e) => {
                 e.currentTarget.style.boxShadow = "none";
                 setHovered(false);
-              }}
+              }} */
             />
           </Box>
           <Box flex="1" textAlign={isEven ? "left" : "right"}>
@@ -126,7 +129,7 @@ const MemberSection = ({
               {hovered ? carDescription : description}
             </Text>
             <Text fontSize="md" color={"red"} mt={1}>
-              <Link href={"/members"}>
+              <Link href={`/${locale}/members/${title.toLowerCase()}`}>
                 {t("meetTheMember")} <ChevronRightIcon />
               </Link>
             </Text>

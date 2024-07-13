@@ -40,7 +40,7 @@ export default function Navbar() {
           <ul className="flex justify-center items-center space-x-12 text-white">
             {navlinks.map((link) => (
               <li key={link.href}>
-                <a href={link.href}>{link.name}</a>
+                <a className="font-medium hover:text-red-700" href={link.href}>{link.name}</a>
               </li>
             ))}
           </ul>
