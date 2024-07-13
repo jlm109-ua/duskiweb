@@ -5,6 +5,9 @@ import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import "@/styles/globals.css";
 import { ChakraProvider } from "@chakra-ui/react";
+import Image from "next/image";
+import Navbar from "@/components/Navbar";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,7 +37,18 @@ export default async function RootLayout({
         <ChakraProvider>
           <div className="flex flex-col min-h-screen bg-black">
             <NextIntlClientProvider messages={messages}>
-              {children}
+              <div className="flex-col justify-center align-top min-h-screen w-screen bg-black p-5">
+                <Navbar />
+                <LanguageSwitcher />
+                {children}
+                <Image
+                  src="/images/duskiesLogo.png"
+                  alt="logo"
+                  className="fixed bottom-3 right-3 z-10"
+                  width={50}
+                  height={50}
+                />
+              </div>
             </NextIntlClientProvider>
           </div>
         </ChakraProvider>

@@ -23,12 +23,18 @@ const MotionBox = chakra(motion.div, {
  * @param children - El texto del título.
  * @param color - El color del texto.
  */
-const MemberTitle = ({ children, color }: {children: string, color: string}) => {
-    return (
-        <Text fontSize="75" fontWeight="bold" color={color}>
-            {children}
-        </Text>
-    );
+const MemberTitle = ({
+  children,
+  color,
+}: {
+  children: string;
+  color: string;
+}) => {
+  return (
+    <Text fontSize="75" fontWeight="bold" color={color}>
+      {children}
+    </Text>
+  );
 };
 
 /**
@@ -57,9 +63,7 @@ const MemberSection = ({ member, index }: { member: any; index: number }) => {
   } as any; // ToDo: fixear tipado
 
   return (
-    <Container
-      maxW={1200}
-    >
+    <Container maxW={1200}>
       <MotionBox
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -68,17 +72,14 @@ const MemberSection = ({ member, index }: { member: any; index: number }) => {
         mb={4}
         bg={isEven ? "black" : "white"}
       >
-        <Flex 
-          direction={isEven ? "row-reverse" : "row"} 
-          align="center"
-        >
-          <Box 
-              flex="1" 
-              mr={isEven ? 0 : 4} 
-              ml={isEven ? 4 : 0} 
-              display="flex" 
-              justifyContent={isEven ? 'flex-end' : 'flex-start' } 
-              alignItems={isEven ? 'right' : 'left'}
+        <Flex direction={isEven ? "row-reverse" : "row"} align="center">
+          <Box
+            flex="1"
+            mr={isEven ? 0 : 4}
+            ml={isEven ? 4 : 0}
+            display="flex"
+            justifyContent={isEven ? "flex-end" : "flex-start"}
+            alignItems={isEven ? "right" : "left"}
           >
             <Image
               src={image}
@@ -87,27 +88,28 @@ const MemberSection = ({ member, index }: { member: any; index: number }) => {
               height={400}
               className="rounded-sm"
               onMouseEnter={(e) => {
-                e.currentTarget.style.boxShadow = isEven ? imgShadowWhite : imgShadowBlack;
+                e.currentTarget.style.boxShadow = isEven
+                  ? imgShadowWhite
+                  : imgShadowBlack;
                 setHovered(true);
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.boxShadow = "none";
                 setHovered(false);
               }}
-          />
+            />
           </Box>
-          <Box 
-              flex="1"
-              textAlign={isEven ? 'left' : 'right'}
-          >
-            <MemberTitle color={isEven ? 'white' : 'black'}>
+          <Box flex="1" textAlign={isEven ? "left" : "right"}>
+            <MemberTitle color={isEven ? "white" : "black"}>
               {hovered ? car : title}
             </MemberTitle>
-            <Text fontSize="md" color={isEven ? 'white' : 'black'}>
+            <Text fontSize="md" color={isEven ? "white" : "black"}>
               {hovered ? carDescription : description}
             </Text>
-            <Text fontSize="md" color={'red'} mt={1}>  
-              <Link href={"/members"}>{t('meetTheMember')} <ChevronRightIcon/></Link>
+            <Text fontSize="md" color={"red"} mt={1}>
+              <Link href={"/members"}>
+                {t("meetTheMember")} <ChevronRightIcon />
+              </Link>
             </Text>
           </Box>
         </Flex>
