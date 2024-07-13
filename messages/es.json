@@ -7,42 +7,64 @@
     "contact": "Contacto",
     "aboutUs": "Sobre Nosotros"
   },
-
   "LangSwitcher": {
     "en": "Inglés",
     "es": "Español"
   },
-
   "Members": {
     "title": "Miembros",
     "meetTheMember": "¡Conoce al miembro!",
     "Jimy": {
       "description": "Jimy es un chico muy guay y le encanta destruir su Lexus. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "car": "Lexus IS200",
-      "carDescription": "Este es un coche muy guay"
+      "carDescription": "Este es un coche muy guay",
+      "specs": {
+        "engine": "2.0L 6-cilindros",
+        "power": "155 hp",
+        "torque": "193 lb-ft"
+      }
     },
     "Edu": {
       "description": "Edu es un chico muy guay y le encanta destruir su BMW también. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "car": "BMW 330Ci",
-      "carDescription": "Este es un coche muy guay también"
+      "carDescription": "Este es un coche muy guay también",
+      "specs": {
+        "engine": "3.0L 6-cilindros",
+        "power": "231 hp",
+        "torque": "221 lb-ft"
+      }
     },
     "Rodri": {
       "description": "Rodri es un chico muy guay y le encanta destruir su Miata también. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "car": "Miata NB",
-      "carDescription": "Este es un coche muy guay también"
+      "carDescription": "Este es un coche muy guay también",
+      "specs": {
+        "engine": "1.6L 4-cilindros",
+        "power": "110 hp",
+        "torque": "100 lb-ft"
+      }
     },
     "Wonder": {
       "description": "Wonder es un chico muy guay y le encanta destruir su 350Z también. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "car": "Nissan 350Z",
-      "carDescription": "Este es un coche muy guay también"
+      "carDescription": "Este es un coche muy guay también",
+      "specs": {
+        "engine": "3.5L V6",
+        "power": "287 hp",
+        "torque": "274 lb-ft"
+      }
     },
     "FlyDaniel": {
       "description": "FlyDaniel es un chico muy guay y le encanta destruir su Primera también. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "car": "Nissan Primera",
-      "carDescription": "Este es un coche muy guay también"
+      "carDescription": "Este es un coche muy guay también",
+      "specs": {
+        "engine": "2.0L 4-cilindros",
+        "power": "140 hp",
+        "torque": "130 lb-ft"
+      }
     }
   },
-
   "404": {
     "notFound": "404 | Página no encontrada",
     "goHome": "Inicio"

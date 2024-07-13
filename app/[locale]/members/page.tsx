@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import { Box } from "@chakra-ui/react";
 import MemberSection from "@/components/MemberSection";
-import Title from "@/components/Title";
+import { Title } from "@/components/Title";
 import { useTranslations } from "next-intl";
 
 /**
