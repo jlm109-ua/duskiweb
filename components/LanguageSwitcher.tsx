@@ -10,10 +10,10 @@ export default function LanguageSwitcher() {
   const searchParams = useSearchParams();
   const t = useTranslations("LangSwitcher");
 
-  const [currentLang, setCurrentLang] = useState("en");
+  const [currentLang, setCurrentLang] = useState("es");
 
   useEffect(() => {
-    const langInPath = pathname.split('/')[1];
+    const langInPath = pathname.split("/")[1];
     if (langInPath && langInPath.match(/^[a-z]{2}$/)) {
       setCurrentLang(langInPath);
     }
@@ -29,14 +29,14 @@ export default function LanguageSwitcher() {
   };
 
   return (
-    <div>
+    <div className="fixed bottom-5 left-5 md:bottom-auto md:left-auto md:top-5 md:right-10 z-10">
       <select
-        className="bg-white text-black"
+        className="bg-black text-white border-2 border-white rounded-lg p-1 shadow-md hover:shadow-white cursor-pointer focus:shadow-white"
         value={currentLang}
         onChange={changeLanguage}
       >
-        <option value="en">{t('en')}</option>
-        <option value="es">{t('es')}</option>
+        <option value="es">{t("es")}</option>
+        <option value="en">{t("en")}</option>
       </select>
     </div>
   );

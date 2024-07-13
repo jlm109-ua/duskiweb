@@ -19,7 +19,7 @@ export default function ImageSlider() {
   }, []);
 
   return (
-    <div className="relative w-8/12 h-full mt-10">
+    <div className="w-8/12 h-full">
       <Image
         src={images[currentImage]}
         alt="slider"
