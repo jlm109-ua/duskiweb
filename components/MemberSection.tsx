@@ -1,13 +1,26 @@
 "use client";
 
 import { Box, Text, Flex, Container } from "@chakra-ui/react";
-import { motion } from "framer-motion";
+import { motion, Transition } from "framer-motion";
 import { chakra, shouldForwardProp } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import { useState } from "react";
+
+interface Member {
+  image: string;
+  title: string;
+  description: string;
+  car: string;
+  carDescription: string;
+}
+
+interface CustomTransition {
+  duration: number;
+  delay: number;
+}
 
 /**
  * Componente que permite animaciones con Framer Motion y Chakra UI.
@@ -42,7 +55,13 @@ const MemberTitle = ({
  * @param member - La información del miembro.
  * @param index - El índice del miembro.
  */
-const MemberSection = ({ member, index }: { member: any; index: number }) => {
+const MemberSection = ({
+  member,
+  index,
+}: {
+  member: Member;
+  index: number;
+}) => {
   const { image, title, description, car, carDescription } = member;
 
   // DEBUG
@@ -60,7 +79,7 @@ const MemberSection = ({ member, index }: { member: any; index: number }) => {
   const transition = {
     duration: 0.8,
     delay: index * 0.2,
-  } as any; // ToDo: fixear tipado
+  } as any;
 
   return (
     <Container maxW={1200}>

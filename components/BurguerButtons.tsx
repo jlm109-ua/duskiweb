@@ -3,7 +3,7 @@ export default function BurguerButtons({
   setState,
 }: {
   state: boolean;
-  setState: any;
+  setState: (state: boolean) => void;
 }) {
   return (
     <div className="select-none md:hidden flex justify-end fixed top-5 right-5 cursor-pointer">
