@@ -1,10 +1,29 @@
-import { Container, Box, Text, Image } from "@chakra-ui/react";
+import { Container, Box, Text, Image, Badge, Link, Button, Icon } from "@chakra-ui/react";
 import { useTranslations } from "next-intl";
 import { MemberTitle, MemberSubTitle } from "@/components/Title";
+import { IoLogoInstagram, IoLogoTwitter, IoLogoYoutube, IoLogoFacebook } from "react-icons/io";
 
 export default function Member({ params: { profile } }: { params: { profile: string } }) {
     const memberName = profile[0].toUpperCase() + profile.slice(1)
     const t = useTranslations(`Members.${memberName}`);
+    const tM = useTranslations(`Members`);
+    const instagramLink = t("media.instagram")
+    const instagramTag = "@" + instagramLink.split("/")[3]
+    const facebookLink = t("media.facebook")
+    const facebookTag = "@" + facebookLink.split("/")[3]
+    const twitterLink = t("media.twitter")
+    const twitterTag = "@" + twitterLink.split("/")[3]
+    const youtubeLink = t("media.youtube")
+    const youtubeTag = "@" + youtubeLink.split("/")[3]
+
+    // DEBUG
+    console.log("Media links: ", instagramLink, facebookLink, twitterLink, youtubeLink);
+
+    const mediaLinks = [instagramLink, facebookLink, twitterLink, youtubeLink];
+    const validLinks = mediaLinks.filter(link => link !== "");
+    const countValidLinks = validLinks.length;
+
+    console.log("Número de enlaces válidos: ", countValidLinks);
 
     return (
         <Container
@@ -24,22 +43,62 @@ export default function Member({ params: { profile } }: { params: { profile: str
                     className="float-left"
                     mr={10}
                     border={"1px solid white"}
-                //boxShadow={"rgba(255, 255, 255, 0.1) 0px 4px 16px, rgba(255, 255, 255, 0.05) 0px 8px 32px;"}
                 />
-                <Text
-                    fontSize="md"
-                    color="white"
-                    className="mr-4 text-left"
-                >
-                    <Box
-                        className="mb-6"
-                    >
-                        <MemberTitle>{memberName}</MemberTitle>
-                    </Box>
+                <Box>
+                    <Text fontSize="md" color="white" className="mr-4 text-left">
+                        <Box className="mb-6">
+                            <MemberTitle>{memberName}</MemberTitle>
+                        </Box>
+                        {t("description")}
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam voluptatum maxime quis repellendus enim sequi totam tempora dignissimos temporibus. Rem porro qui hic nobis doloremque vero dicta ipsum laudantium nisi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, eveniet. Repellat non dolorum velit dignissimos quos sint quo maiores, doloribus molestias quidem mollitia officiis cumque repudiandae fugit. Ullam, asperiores accusantium. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    </Text>
 
-                    {t("description")}
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam voluptatum maxime quis repellendus enim sequi totam tempora dignissimos temporibus. Rem porro qui hic nobis doloremque vero dicta ipsum laudantium nisi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, eveniet. Repellat non dolorum velit dignissimos quos sint quo maiores, doloribus molestias quidem mollitia officiis cumque repudiandae fugit. Ullam, asperiores accusantium. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                </Text>
+                    {countValidLinks > 0 && (
+                        <Box
+                            display={"flex"}
+                            flexWrap={"wrap"}
+                            flexDirection={"row"}
+                            mt={4}
+                        >
+                            {instagramLink !== "" && (
+                                <Box
+                                    margin={"auto"}
+                                >
+                                    <Link href={instagramLink} target="_blank">
+                                        <Button variant="ghost" colorScheme='red' leftIcon={<IoLogoInstagram />}>{instagramTag}</Button>
+                                    </Link>
+                                </Box>
+                            )}
+                            {twitterLink !== "" && (
+                                <Box
+                                    margin={"auto"}
+                                >
+                                    <Link href={twitterLink} target="_blank">
+                                        <Button variant="ghost" colorScheme='red' leftIcon={<IoLogoTwitter />}>{twitterTag}</Button>
+                                    </Link>
+                                </Box>
+                            )}
+                            {youtubeLink !== "" && (
+                                <Box
+                                    margin={"auto"}
+                                >
+                                    <Link href={youtubeLink} target="_blank">
+                                        <Button variant="ghost" colorScheme='red' leftIcon={<IoLogoYoutube />}>{youtubeTag}</Button>
+                                    </Link>
+                                </Box>
+                            )}
+                            {facebookLink !== "" && (
+                                <Box
+                                    margin={"auto"}
+                                >
+                                    <Link href={facebookLink} target="_blank">
+                                        <Button variant="ghost" colorScheme='red' leftIcon={<IoLogoFacebook />}>{facebookTag}</Button>
+                                    </Link>
+                                </Box>
+                            )}
+                        </Box>
+                    )}
+                </Box>
             </Box>
 
             <Box>
@@ -59,20 +118,93 @@ export default function Member({ params: { profile } }: { params: { profile: str
                 <Box
                     className="mt-6 mb-6"
                 >
-                    <MemberSubTitle>{t("specs")}</MemberSubTitle>
+                    <MemberSubTitle>{tM("specsTitle")}</MemberSubTitle>
                 </Box>
 
-                <Text
-                    fontSize="md"
-                    color="white"
+                <Box
+                    textAlign={"center"}
+                    display={"flex"}
+                    flex={"3"}
+                    flexDirection={"row"}
                 >
-                    <ul>
-                        <li>{t("specs.engine")}</li>
-                        <li>{t("specs.power")}</li>
-                        <li>{t("specs.torque")}</li>
-                    </ul>
-                </Text>
+                    <Text
+                        fontSize="md"
+                        color="white"
+                        margin={"auto"}
+                    >
+                        <Text
+                            fontSize="lg"
+                            color="white"
+                            fontWeight={"bold"}
+                        >
+                            {tM("specs.engine")}
+                        </Text>
+                        {t("specs.engine")}
+                    </Text>
+                    <Text
+                        fontSize="md"
+                        color="white"
+                        margin={"auto"}
+                    >
+                        <Text
+                            fontSize="lg"
+                            color="white"
+                            fontWeight={"bold"}
+                        >
+                            {tM("specs.power")}
+                        </Text>
+                        {t("specs.power")}
+                    </Text>
+                    <Text
+                        fontSize="md"
+                        color="white"
+                        margin={"auto"}
+                    >
+                        <Text
+                            fontSize="lg"
+                            color="white"
+                            fontWeight={"bold"}
+                        >
+                            {tM("specs.torque")}
+                        </Text>
+                        {t("specs.torque")}
+                    </Text>
+                </Box>
             </Box>
         </Container>
     );
 }
+
+/*
+<Box display={"flex"} flexWrap={"wrap"} flexDirection={"row"} mt={4}>
+    {instagramLink !== "" && (
+        <Badge colorScheme="pink" variant="solid" className="mb-2" mr={2}>
+            <Link href={instagramLink} isExternal>
+                <Instagram size={"sm"} />
+                {instagramTag}
+            </Link>
+        </Badge>
+    )}
+    {facebookLink !== "" && (
+        <Badge colorScheme="blue" variant="solid" className="mb-2" mr={2}>
+            <Link href={facebookLink} isExternal>
+                {facebookTag}
+            </Link>
+        </Badge>
+    )}
+    {twitterLink !== "" && (
+        <Badge colorScheme="twitter" variant="solid" className="mb-2" mr={2}>
+            <Link href={twitterLink} isExternal>
+                {twitterTag}
+            </Link>
+        </Badge>
+    )}
+    {youtubeLink !== "" && (
+        <Badge colorScheme="red" variant="solid" className="mb-2" mr={2}>
+            <Link href={youtubeLink} isExternal>
+                {youtubeTag}
+            </Link>
+        </Badge>
+    )}
+</Box>
+*/

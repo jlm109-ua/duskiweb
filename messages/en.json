@@ -14,54 +14,102 @@
   "Members": {
     "title": "Members",
     "meetTheMember": "Meet the member!",
+    "specsTitle": "Specs",
+    "specs": {
+      "engine": "Engine",
+      "power": "Power",
+      "torque": "Torque"
+    },
+    "media": {
+      "youtube": "YouTube",
+      "twitch": "Twitch",
+      "instagram": "Instagram",
+      "twitter": "Twitter",
+      "facebook": "Facebook"
+    },
     "Jimy": {
       "description": "Jimy is a very cool guy and loves destroying his Lexus. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "car": "Lexus IS200",
       "carDescription": "This is a very cool car",
+      "specsTitle": "Specs",
       "specs": {
         "engine": "2.0L 6-cylinder",
         "power": "155 hp",
         "torque": "193 lb-ft"
+      },
+      "media": {
+        "instagram": "https://www.instagram.com/jimy.k4",
+        "twitter": "https://www.twitter.com/jimy_k4",
+        "youtube": "",
+        "facebook": ""
       }
     },
     "Edu": {
       "description": "Edu is a very cool guy and loves destroying his BMW as well. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "car": "BMW 330Ci",
       "carDescription": "This is a very cool car too",
+      "specsTitle": "Specs",
       "specs": {
         "engine": "3.0L 6-cylinder",
         "power": "231 hp",
         "torque": "221 lb-ft"
+      },
+      "media": {
+        "instagram": "",
+        "twitter": "",
+        "youtube": "",
+        "facebook": ""
       }
     },
     "Rodri": {
       "description": "Rodri is a very cool guy and loves destroying his Miata as well. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "car": "Miata NB",
       "carDescription": "This is a very cool car too",
+      "specsTitle": "Specs",
       "specs": {
         "engine": "1.6L 4-cylinder",
         "power": "110 hp",
         "torque": "100 lb-ft"
+      },
+      "media": {
+        "instagram": "",
+        "twitter": "",
+        "youtube": "",
+        "facebook": ""
       }
     },
     "Wonder": {
       "description": "Wonder is a very cool guy and loves destroying his 350Z as well. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "car": "Nissan 350Z",
       "carDescription": "This is a very cool car too",
+      "specsTitle": "Specs",
       "specs": {
         "engine": "3.5L V6",
         "power": "287 hp",
         "torque": "274 lb-ft"
+      },
+      "media": {
+        "instagram": "",
+        "twitter": "",
+        "youtube": "",
+        "facebook": ""
       }
     },
     "FlyDaniel": {
       "description": "FlyDaniel is a very cool guy and loves destroying his Primera as well. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "car": "Nissan Primera",
       "carDescription": "This is a very cool car too",
+      "specsTitle": "Specs",
       "specs": {
         "engine": "2.0L 4-cylinder",
         "power": "140 hp",
         "torque": "130 lb-ft"
+      },
+      "media": {
+        "instagram": "",
+        "twitter": "",
+        "youtube": "",
+        "facebook": ""
       }
     }
   },

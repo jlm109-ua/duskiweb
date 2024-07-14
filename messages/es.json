@@ -14,6 +14,19 @@
   "Members": {
     "title": "Miembros",
     "meetTheMember": "¡Conoce al miembro!",
+    "specsTitle": "Especificaciones",
+    "specs": {
+      "engine": "Motor",
+      "power": "Potencia",
+      "torque": "Torque"
+    },
+    "media": {
+      "youtube": "YouTube",
+      "twitch": "Twitch",
+      "instagram": "Instagram",
+      "twitter": "Twitter",
+      "facebook": "Facebook"
+    },
     "Jimy": {
       "description": "Jimy es un chico muy guay y le encanta destruir su Lexus. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "car": "Lexus IS200",
@@ -22,6 +35,12 @@
         "engine": "2.0L 6-cilindros",
         "power": "155 hp",
         "torque": "193 lb-ft"
+      },
+      "media": {
+        "instagram": "https://www.instagram.com/jimy.k4",
+        "twitter": "https://www.twitter.com/jimy_k4",
+        "youtube": "",
+        "facebook": ""
       }
     },
     "Edu": {
@@ -32,6 +51,12 @@
         "engine": "3.0L 6-cilindros",
         "power": "231 hp",
         "torque": "221 lb-ft"
+      },
+      "media": {
+        "instagram": "",
+        "twitter": "",
+        "youtube": "",
+        "facebook": ""
       }
     },
     "Rodri": {
@@ -42,6 +67,12 @@
         "engine": "1.6L 4-cilindros",
         "power": "110 hp",
         "torque": "100 lb-ft"
+      },
+      "media": {
+        "instagram": "",
+        "twitter": "",
+        "youtube": "",
+        "facebook": ""
       }
     },
     "Wonder": {
@@ -52,6 +83,12 @@
         "engine": "3.5L V6",
         "power": "287 hp",
         "torque": "274 lb-ft"
+      },
+      "media": {
+        "instagram": "",
+        "twitter": "",
+        "youtube": "",
+        "facebook": ""
       }
     },
     "FlyDaniel": {
@@ -62,6 +99,12 @@
         "engine": "2.0L 4-cilindros",
         "power": "140 hp",
         "torque": "130 lb-ft"
+      },
+      "media": {
+        "instagram": "",
+        "twitter": "",
+        "youtube": "",
+        "facebook": ""
       }
     }
   },
