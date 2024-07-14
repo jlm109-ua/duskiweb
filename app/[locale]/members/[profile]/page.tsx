@@ -174,37 +174,3 @@ export default function Member({ params: { profile } }: { params: { profile: str
         </Container>
     );
 }
-
-/*
-<Box display={"flex"} flexWrap={"wrap"} flexDirection={"row"} mt={4}>
-    {instagramLink !== "" && (
-        <Badge colorScheme="pink" variant="solid" className="mb-2" mr={2}>
-            <Link href={instagramLink} isExternal>
-                <Instagram size={"sm"} />
-                {instagramTag}
-            </Link>
-        </Badge>
-    )}
-    {facebookLink !== "" && (
-        <Badge colorScheme="blue" variant="solid" className="mb-2" mr={2}>
-            <Link href={facebookLink} isExternal>
-                {facebookTag}
-            </Link>
-        </Badge>
-    )}
-    {twitterLink !== "" && (
-        <Badge colorScheme="twitter" variant="solid" className="mb-2" mr={2}>
-            <Link href={twitterLink} isExternal>
-                {twitterTag}
-            </Link>
-        </Badge>
-    )}
-    {youtubeLink !== "" && (
-        <Badge colorScheme="red" variant="solid" className="mb-2" mr={2}>
-            <Link href={youtubeLink} isExternal>
-                {youtubeTag}
-            </Link>
-        </Badge>
-    )}
-</Box>
-*/

@@ -17,7 +17,7 @@ const useGetMembers = () => {
   // console.log("DEBUG: ", members);
 
   const memberKeys = Object.keys(members).filter(
-    (key) => key !== "title" && key !== "meetTheMember"
+    (key) => key !== "title" && key !== "meetTheMember" && key !== "specs" && key !== "media" && key !== "specsTitle"
   );
 
   return memberKeys.map((key) => ({
