@@ -170,6 +170,12 @@ export default function Member({ params: { profile } }: { params: { profile: str
                         {t("specs.torque")}
                     </Text>
                 </Box>
+
+                <Box
+                    className="mt-6 mb-6"
+                >
+                    <MemberSubTitle>{tM("modsTitle")}</MemberSubTitle>
+                </Box>
             </Box>
         </Container>
     );

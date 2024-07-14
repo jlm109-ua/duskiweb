@@ -12,13 +12,15 @@ import { useTranslations } from "next-intl";
 const useGetMembers = () => {
   const t = useTranslations();
   const members = t.raw("Members");
+  const ignoreKeys = ["title", "meetTheMember", "specs", "media", "specsTitle", "modsTitle"];
 
   // DEBUG
   // console.log("DEBUG: ", members);
 
   const memberKeys = Object.keys(members).filter(
-    (key) => key !== "title" && key !== "meetTheMember" && key !== "specs" && key !== "media" && key !== "specsTitle"
+    (key) => !ignoreKeys.includes(key)
   );
+
 
   return memberKeys.map((key) => ({
     title: key,
