@@ -2,17 +2,30 @@
 
 import { useEffect, useState } from 'react';
 import { Canvas, useThree, useFrame } from '@react-three/fiber';
-import { useGLTF, OrbitControls } from '@react-three/drei';
+import { useGLTF, OrbitControls, Environment } from '@react-three/drei';
 import { Suspense } from 'react';
+import { MeshStandardMaterial } from 'three';
 import * as THREE from 'three';
 
 function Model({ scale, position }: { scale: number[], position: number[] }) {
   const { scene } = useGLTF('/models/duskies_logo.glb');
 
-  useEffect(() => {
+  /*useEffect(() => {
     scene.traverse((child) => {
       if ((child as THREE.Mesh).isMesh) {
         (child as THREE.Mesh).material = new THREE.MeshBasicMaterial({ color: 'white' });
+      }
+    });
+  }, [scene]);*/
+
+  useEffect(() => {
+    scene.traverse((child) => {
+      if ((child as THREE.Mesh).isMesh) {
+        (child as THREE.Mesh).material = new MeshStandardMaterial({
+          color: 'white',
+          metalness: 1,
+          roughness: 0.07
+        });
       }
     });
   }, [scene]);
@@ -81,6 +94,7 @@ export default function Logo3D({ scale = [2, 2, 2], position = [0, -0.5, 0], adj
       <Suspense fallback={null}>
         <ambientLight intensity={0.5} />
         <pointLight position={[10, 10, 10]} />
+        <Environment preset="warehouse" />
         <Model scale={scale} position={position} />
         <FitCameraToModel adjustPosition={adjustPosition} />
         <OrbitControls />
