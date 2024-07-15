@@ -7,12 +7,10 @@
     "contact": "Contact",
     "aboutUs": "About Us"
   },
-
   "LangSwitcher": {
     "en": "English",
     "es": "Spanish"
   },
-
   "Members": {
     "title": "Members",
     "meetTheMember": "Meet the member!",
@@ -42,7 +40,24 @@
       "carDescription": "This is a very cool car too"
     }
   },
-
+  "Events": {
+    "title": "Events",
+    "event1": {
+      "title": "Event 1",
+      "description": "This is the first event of the year. It will be held at the local track and we will have a lot of fun. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "date": "2021-01-01"
+    },
+    "event2": {
+      "title": "Event 2",
+      "description": "This is the second event of the year. It will be held at the local track and we will have a lot of fun. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "date": "2021-02-02"
+    },
+    "event3": {
+      "title": "Event 3",
+      "description": "This is the third event of the year. It will be held at the local track and we will have a lot of fun. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "date": "2021-03-03"
+    }
+  },
   "404": {
     "notFound": "404 | Page not found",
     "goHome": "Home"

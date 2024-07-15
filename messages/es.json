@@ -7,12 +7,10 @@
     "contact": "Contacto",
     "aboutUs": "Sobre Nosotros"
   },
-
   "LangSwitcher": {
     "en": "Inglés",
     "es": "Español"
   },
-
   "Members": {
     "title": "Miembros",
     "meetTheMember": "¡Conoce al miembro!",
@@ -42,7 +40,24 @@
       "carDescription": "Este es un coche muy guay también"
     }
   },
-
+  "Events": {
+    "title": "Eventos",
+    "event1": {
+      "title": "Evento 1",
+      "description": "Este es el primer evento del año. Se llevará a cabo en la pista local y nos divertiremos mucho. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "date": "2021-01-01"
+    },
+    "event2": {
+      "title": "Evento 2",
+      "description": "Este es el segundo evento del año. Se llevará a cabo en la pista local y nos divertiremos mucho. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "date": "2021-02-02"
+    },
+    "event3": {
+      "title": "Evento 3",
+      "description": "Este es el tercer evento del año. Se llevará a cabo en la pista local y nos divertiremos mucho. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "date": "2021-03-03"
+    }
+  },
   "404": {
     "notFound": "404 | Página no encontrada",
     "goHome": "Inicio"
