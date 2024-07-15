@@ -6,25 +6,25 @@ import { useGLTF, OrbitControls } from '@react-three/drei';
 import { Suspense } from 'react';
 import * as THREE from 'three';
 
-function Model({ scale, position }) {
+function Model({ scale, position }: { scale: number[], position: number[] }) {
   const { scene } = useGLTF('/models/duskies_logo.glb');
 
   useEffect(() => {
     scene.traverse((child) => {
-      if (child.isMesh) {
-        child.material = new THREE.MeshBasicMaterial({ color: 'white' });
+      if ((child as THREE.Mesh).isMesh) {
+        (child as THREE.Mesh).material = new THREE.MeshBasicMaterial({ color: 'white' });
       }
     });
   }, [scene]);
 
   useFrame(() => {
-    scene.rotation.y += 0.07; 
+    scene.rotation.y += 0.07;
   });
 
   return <primitive object={scene} scale={scale} position={position} />;
 }
 
-function FitCameraToModel({ adjustPosition }) {
+function FitCameraToModel({ adjustPosition }: { adjustPosition: boolean }) {
   const { camera, gl: { domElement } } = useThree();
   const { scene } = useGLTF('/models/duskies_logo.glb');
 
@@ -50,8 +50,13 @@ function FitCameraToModel({ adjustPosition }) {
     return () => {
       scene.traverse((child) => {
         if ((child as THREE.Mesh).isMesh) {
-          (child as THREE.Mesh).geometry.dispose();
-          (child as THREE.Mesh).material.dispose();
+          const mesh = child as THREE.Mesh;
+          mesh.geometry.dispose();
+          if (mesh.material instanceof THREE.Material) {
+            mesh.material.dispose();
+          } else if (Array.isArray(mesh.material)) {
+            mesh.material.forEach((material) => material.dispose());
+          }
         }
       });
     };
