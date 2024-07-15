@@ -18,7 +18,7 @@ function Model({ scale, position }: { scale: number[], position: number[] }) {
   }, [scene]);
 
   useFrame(() => {
-    scene.rotation.y += 0.07;
+    scene.rotation.y += 0.025;
   });
 
   return <primitive object={scene} scale={scale} position={position} />;
@@ -39,7 +39,7 @@ function FitCameraToModel({ adjustPosition }: { adjustPosition: boolean }) {
 
     camera.position.copy(center);
     camera.position.x += size / 1.5;
-    camera.position.y += size / 3;
+    camera.position.y += size / 10;
     camera.position.z += size / 1.5;
     camera.lookAt(center);
 
