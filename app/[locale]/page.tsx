@@ -1,17 +1,12 @@
-import Image from "next/image";
+import dynamic from 'next/dynamic';
 
-export default async function Home() {
+const Logo3D = dynamic(() => import('../../components/Logo3D'), { ssr: false });
+
+export default function Home() {
   return (
     <div className="flex items-center justify-center mt-20">
       <div className="flex items-center justify-center">
-        <Image
-          src="/images/duskiesLogo.png"
-          alt="logo"
-          priority
-          className="mt-10"
-          width={250}
-          height={250}
-        />
+        <Logo3D />
       </div>
     </div>
   );
