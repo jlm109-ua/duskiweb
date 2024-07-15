@@ -31,7 +31,7 @@ function Model({ scale, position }: { scale: number[], position: number[] }) {
   }, [scene]);
 
   useFrame(() => {
-    scene.rotation.y += 0.010;
+    scene.rotation.y += 0.018;
   });
 
   return <primitive object={scene} scale={scale} position={position} />;
