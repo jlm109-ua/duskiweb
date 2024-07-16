@@ -2,6 +2,9 @@ import { Container, Box, Text, Image, Badge, Link, Button, Icon } from "@chakra-
 import { useTranslations } from "next-intl";
 import { MemberTitle, MemberSubTitle } from "@/components/Title";
 import { IoLogoInstagram, IoLogoTwitter, IoLogoYoutube, IoLogoFacebook } from "react-icons/io";
+import dynamic from 'next/dynamic';
+
+const Car3D = dynamic(() => import('@/components/Car3D'), { ssr: false });
 
 export default function Member({ params: { profile } }: { params: { profile: string } }) {
     const memberName = profile[0].toUpperCase() + profile.slice(1)
@@ -17,13 +20,17 @@ export default function Member({ params: { profile } }: { params: { profile: str
     const youtubeTag = "@" + youtubeLink.split("/")[3]
 
     // DEBUG
-    console.log("Media links: ", instagramLink, facebookLink, twitterLink, youtubeLink);
+    //console.log("Media links: ", instagramLink, facebookLink, twitterLink, youtubeLink);
 
     const mediaLinks = [instagramLink, facebookLink, twitterLink, youtubeLink];
     const validLinks = mediaLinks.filter(link => link !== "");
     const countValidLinks = validLinks.length;
 
-    console.log("Número de enlaces válidos: ", countValidLinks);
+    // DEBUG
+    //console.log("Número de enlaces válidos: ", countValidLinks);
+
+    const is3D = t("3D") === "true";
+    const model = t("3DModel");
 
     return (
         <Container
@@ -100,6 +107,14 @@ export default function Member({ params: { profile } }: { params: { profile: str
                     )}
                 </Box>
             </Box>
+
+            {is3D && (
+                <Box
+                    className="mt-10"
+                >
+                    <Car3D model={model} />
+                </Box>
+            )}
 
             <Box>
                 <Box

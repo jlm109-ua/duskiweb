@@ -42,7 +42,9 @@
         "twitter": "https://www.twitter.com/jimy_k4",
         "youtube": "",
         "facebook": ""
-      }
+      },
+      "3D": "true",
+      "3DModel": "/members/3D/Jimy_Lexus_IS200.glb"
     },
     "Edu": {
       "description": "Edu es un chico muy guay y le encanta destruir su BMW también. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -58,7 +60,8 @@
         "twitter": "",
         "youtube": "",
         "facebook": ""
-      }
+      },
+      "3d": "false"
     },
     "Rodri": {
       "description": "Rodri es un chico muy guay y le encanta destruir su Miata también. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -74,7 +77,8 @@
         "twitter": "",
         "youtube": "",
         "facebook": ""
-      }
+      },
+      "3d": "false"
     },
     "Wonder": {
       "description": "Wonder es un chico muy guay y le encanta destruir su 350Z también. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -90,7 +94,8 @@
         "twitter": "",
         "youtube": "",
         "facebook": ""
-      }
+      },
+      "3d": "false"
     },
     "Flydaniel": {
       "description": "FlyDaniel es un chico muy guay y le encanta destruir su Primera también. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -106,7 +111,8 @@
         "twitter": "",
         "youtube": "",
         "facebook": ""
-      }
+      },
+      "3d": "false"
     }
   },
   "404": {

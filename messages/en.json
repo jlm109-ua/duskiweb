@@ -43,7 +43,9 @@
         "twitter": "https://www.twitter.com/jimy_k4",
         "youtube": "",
         "facebook": ""
-      }
+      },
+      "3D": "true",
+      "3DModel": "/members/3D/Jimy_Lexus_IS200.glb"
     },
     "Edu": {
       "description": "Edu is a very cool guy and loves destroying his BMW as well. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -60,7 +62,8 @@
         "twitter": "",
         "youtube": "",
         "facebook": ""
-      }
+      },
+      "3d": "false"
     },
     "Rodri": {
       "description": "Rodri is a very cool guy and loves destroying his Miata as well. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -77,7 +80,8 @@
         "twitter": "",
         "youtube": "",
         "facebook": ""
-      }
+      },
+      "3d": "false"
     },
     "Wonder": {
       "description": "Wonder is a very cool guy and loves destroying his 350Z as well. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -94,7 +98,8 @@
         "twitter": "",
         "youtube": "",
         "facebook": ""
-      }
+      },
+      "3d": "false"
     },
     "Flydaniel": {
       "description": "FlyDaniel is a very cool guy and loves destroying his Primera as well. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -111,7 +116,8 @@
         "twitter": "",
         "youtube": "",
         "facebook": ""
-      }
+      },
+      "3d": "false"
     }
   },
   "404": {
