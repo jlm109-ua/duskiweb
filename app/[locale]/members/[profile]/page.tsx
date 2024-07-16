@@ -111,6 +111,7 @@ export default function Member({ params: { profile } }: { params: { profile: str
             {is3D && (
                 <Box
                     className="mt-10"
+                    maxW={1200}
                 >
                     <Car3D model={model} />
                 </Box>
