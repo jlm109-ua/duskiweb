@@ -123,5 +123,9 @@
   "404": {
     "notFound": "404 | Page not found",
     "goHome": "Home"
+  },
+  "Pagination": {
+    "previous": "Previous",
+    "next": "Next"
   }
 }

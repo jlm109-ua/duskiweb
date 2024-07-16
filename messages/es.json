@@ -118,5 +118,9 @@
   "404": {
     "notFound": "404 | Página no encontrada",
     "goHome": "Inicio"
+  },
+  "Pagination": {
+    "previous": "Anterior",
+    "next": "Siguiente"
   }
 }
