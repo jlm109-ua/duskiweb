@@ -123,5 +123,16 @@
   "404": {
     "notFound": "404 | Page not found",
     "goHome": "Home"
+  },
+  "Contact": {
+    "title": "Contact us!",
+    "description": "Have any questions? DM us on Instagram! We'll respond as soon as possible. :)",
+    "chase-the-dusk": "Chase the dusk",
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "message": "Message",
+      "send": "Send"
+    }
   }
 }

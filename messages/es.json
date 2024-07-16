@@ -118,5 +118,16 @@
   "404": {
     "notFound": "404 | Página no encontrada",
     "goHome": "Inicio"
+  },
+  "Contact": {
+    "title": "Contáctanos!",
+    "description": "¿Tienes alguna pregunta? ¡Háblanos a nuestra cuenta de Instagram! Te responderemos en el menor tiempo posible.",
+    "chase-the-dusk": "Chase the dusk",
+    "form": {
+      "name": "Tu nombre",
+      "email": "Tu correo electrónico",
+      "message": "Mensaje",
+      "send": "Enviar"
+    }
   }
 }
