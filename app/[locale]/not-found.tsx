@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import ButtonLink from "@/components/ButtonLink";
-import Title from "@/components/Title";
+import { Title } from "@/components/Title";
 import { Container } from "@chakra-ui/react";
 import { useTranslations } from "next-intl";
 
