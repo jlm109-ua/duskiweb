@@ -65,7 +65,7 @@ export default function Car3D({ scale = [5, 5, 5], position = [0, -0.5, 0], adju
     }
 
     return (
-        <Canvas style={{ background: 'none', width: '70vw', height: '70vh' }}>
+        <Canvas style={{ background: 'none', width: '1200', height: '70vh' }}>
             <Suspense fallback={null}>
                 <ambientLight intensity={1.5} />
                 <pointLight position={[20, 20, 20]} />
