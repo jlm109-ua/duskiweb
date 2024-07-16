@@ -49,7 +49,6 @@ export default function Member({ params: { profile } }: { params: { profile: str
                     height={400}
                     className="float-left"
                     mr={10}
-                    border={"1px solid white"}
                 />
                 <Box>
                     <Text fontSize="md" color="white" className="mr-4 text-left">
@@ -191,6 +190,13 @@ export default function Member({ params: { profile } }: { params: { profile: str
                 >
                     <MemberSubTitle>{tM("modsTitle")}</MemberSubTitle>
                 </Box>
+
+                <Text
+                    fontSize="md"
+                    color="white"
+                >
+                    {t("mods")}
+                </Text>
             </Box>
         </Container>
     );
