@@ -36,7 +36,8 @@ export default function Navbar() {
     <>
       <BurguerButtons state={MenuState} setState={setMenuState} />
       {MenuState ? (
-        <div className="w-full md:block hidden flex-col-reverse">
+        <div className="relative w-full md:block hidden flex-col-reverse bg-black pt-6">
+          <div className="absolute inset-x-0 top-12 h-10 bg-gradient-to-b from-black to-transparent"></div>
           <ul className="flex justify-center items-center space-x-12 text-white">
             {navlinks.map((link) => (
               <li key={link.href}>
@@ -57,9 +58,8 @@ export default function Navbar() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className={`text-lg ${
-                      cleanPathname === link.href ? "font-bold text-xl" : ""
-                    }`}
+                    className={`text-lg ${cleanPathname === link.href ? "font-bold text-xl" : ""
+                      }`}
                     onClick={() => setMenuState(true)}
                   >
                     {link.name}

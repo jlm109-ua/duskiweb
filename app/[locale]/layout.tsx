@@ -37,7 +37,7 @@ export default async function RootLayout({
         <ChakraProvider>
           <div className="flex flex-col min-h-screen bg-black">
             <NextIntlClientProvider messages={messages}>
-              <div className="flex-col justify-center align-top min-h-screen w-screen bg-black p-5">
+              <div className="flex-col justify-center align-top min-h-screen w-screen bg-black pb-5">
                 <Navbar />
                 <LanguageSwitcher />
                 {children}
